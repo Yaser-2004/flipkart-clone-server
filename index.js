@@ -33,7 +33,7 @@ app.use(passport.session());
 const port = 5000;
 const saltRounds = 10;
 
-mongoose.connect("mongodb://127.0.0.1:27017/flipkartClone");
+mongoose.connect(process.env.MONGO_URI);
 
 const userSchema = new mongoose.Schema({
     name: {
